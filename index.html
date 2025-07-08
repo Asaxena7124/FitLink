@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLink - Your Ultimate Fitness Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1C1C1E; /* Primary Background */
+            color: #E0E0E0; /* Light gray text for readability on dark background */
+        }
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Basic styling for sections to ensure proper spacing */
+        section {
+            padding: 4rem 0; /* Vertical padding for sections */
+        }
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 shadow-lg py-4 fixed w-full z-10 top-0 rounded-b-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-[#BB86FC] rounded-lg p-2 hover:bg-gray-800 transition-colors duration-300">FitLink</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300">Features</a>
+                <a href="#how-it-works" class="text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300">How It Works</a>
+                <a href="#benefits" class="text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300">Benefits</a>
+                <a href="#about" class="text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300">About Us</a>
+                <a href="#contact" class="text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-[#BB86FC] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 px-4 shadow-md hidden rounded-b-lg">
+            <a href="#features" class="block py-2 text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300 rounded-md px-3">Features</a>
+            <a href="#how-it-works" class="block py-2 text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300 rounded-md px-3">How It Works</a>
+            <a href="#benefits" class="block py-2 text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300 rounded-md px-3">Benefits</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300 rounded-md px-3">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-[#BB86FC] font-medium transition-colors duration-300 rounded-md px-3">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-br from-[#BB86FC] to-purple-800 text-white py-24 md:py-32 text-center flex items-center min-h-screen pt-20 rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Welcome to <span class="text-yellow-200">FitLink</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in">
+                Your ultimate platform to connect with city gyms, expert trainers, and personalized fitness journeys.
+            </p>
+            <a href="#features" class="inline-block bg-white text-purple-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                Explore FitLink
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-[#1C1C1E] py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#BB86FC]">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Connect Gyms & Trainers -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.177-.023-.352-.068-.521C21.43 15.65 22 14.16 22 12c0-3.313-2.687-6-6-6s-6 2.687-6 6c0 2.16.57 3.65 1.318 4.521-.045.169-.068.344-.068.521v2h5zM12 6V4m0 0V2m0 2h2m-2 0H10m-6 6H2m0 0H0m2 0v2m0-2V8m10-2h2m-2 0H10m-6 6h2m-2 0H0m2 0v2m0-2V8"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Unified Fitness Network</h3>
+                    <p class="text-gray-400">Connect with all city gyms and their certified trainers in one convenient place.</p>
+                </div>
+
+                <!-- Feature 2: Warm-up Exercises for Beginners -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Beginner-Friendly Workouts</h3>
+                    <p class="text-gray-400">Access a curated library of basic warm-up exercises perfect for beginners.</p>
+                </div>
+
+                <!-- Feature 3: Firebase Authentication -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v5a2 2 0 01-2 2h-5a2 2 0 01-2-2V9a2 2 0 012-2h5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Secure Authentication</h3>
+                    <p class="text-gray-400">Seamless and secure login/signup experience powered by Firebase.</p>
+                </div>
+
+                <!-- Feature 4: Customized PDF Downloads -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Personalized Diet Plans</h3>
+                    <p class="text-gray-400">Download customized vegetarian or non-vegetarian diet plan PDFs tailored for you.</p>
+                </div>
+
+                <!-- Feature 5: Profile Management -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-5 0H9M9 6a2 2 0 012-2h2a2 2 0 012 2m-3 0v2m0 3v2m0 3v2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Comprehensive Profile</h3>
+                    <p class="text-gray-400">Easily edit your profile, including age, gender, daily activity, and fitness goals.</p>
+                </div>
+
+                <!-- Feature 6: Gym & Trainer Listings -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Extensive Directories</h3>
+                    <p class="text-gray-400">Browse detailed lists of gyms and professional gym trainers in your city.</p>
+                </div>
+
+                <!-- Feature 7: Review Section -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.519 4.674c.3.921-.755 1.688-1.539 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.539-1.118l1.519-4.674a1 1 0 00-.363-1.118L2.927 9.5c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">User Reviews & Ratings</h3>
+                    <p class="text-gray-400">Share and read reviews for gyms and trainers to make informed decisions.</p>
+                </div>
+
+                <!-- Feature 8: Data Management -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Personalized Data Tracking</h3>
+                    <p class="text-gray-400">Keep track of your age, gender, daily activity, and fitness goals all in one place.</p>
+                </div>
+
+                <!-- Feature 9: Easy Logout -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-gray-700">
+                    <div class="text-[#BB86FC] mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Secure Logout</h3>
+                    <p class="text-gray-400">Log out easily and securely from your FitLink account anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-gray-900 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#BB86FC]">How FitLink Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-xl shadow-md bg-gray-800 border border-gray-700">
+                    <div class="text-[#BB86FC] text-4xl mb-4 font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Sign Up & Personalize</h3>
+                    <p class="text-gray-400">Create your account with Firebase authentication and set up your profile with your fitness goals and data.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-6 rounded-xl shadow-md bg-gray-800 border border-gray-700">
+                    <div class="text-[#BB86FC] text-4xl mb-4 font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Explore & Connect</h3>
+                    <p class="text-gray-400">Browse a comprehensive list of city gyms and professional trainers. Read reviews and find your perfect match.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-6 rounded-xl shadow-md bg-gray-800 border border-gray-700">
+                    <div class="text-[#BB86FC] text-4xl mb-4 font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Achieve Your Goals</h3>
+                    <p class="text-gray-400">Utilize warm-up guides, download personalized diet plans, and track your progress to reach your fitness milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="bg-[#1C1C1E] py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#BB86FC]">Benefits of Using FitLink</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="flex items-start bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                    <div class="text-[#BB86FC] mr-4 mt-1">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1 text-white">Centralized Fitness Hub</h3>
+                        <p class="text-gray-400">No more searching multiple platforms. Find all the best gyms and trainers in your city right here.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                    <div class="text-[#BB86FC] mr-4 mt-1">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1 text-white">Tailored for You</h3>
+                        <p class="text-gray-400">From beginner warm-ups to personalized diet plans, FitLink adapts to your unique fitness journey.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                    <div class="text-[#BB86FC] mr-4 mt-1">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1 text-white">Community & Transparency</h3>
+                        <p class="text-gray-400">Read and contribute to reviews, helping others make informed choices and fostering a transparent fitness community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-900 py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-[#BB86FC]">About FitLink</h2>
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-300">
+                FitLink was founded with a vision to simplify the fitness journey for everyone. We believe that finding the right gym and trainer should be easy and transparent. Our mission is to connect fitness enthusiasts with the best resources, empowering them to achieve their health and wellness goals efficiently and effectively. We are committed to providing a secure, user-friendly, and comprehensive platform that supports every step of your fitness adventure.
+            </p>
+            <div class="mt-10">
+                <img src="data:image/png;base64,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" alt="FitLink App Screenshot" class="mx-auto rounded-xl shadow-lg border border-gray-700 max-w-full h-auto">
+                <p class="text-sm text-gray-500 mt-4">Placeholder: Replace with a screenshot of your FitLink app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#1C1C1E] py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-[#BB86FC]">Get in Touch</h2>
+            <p class="text-lg leading-relaxed max-w-2xl mx-auto mb-10 text-gray-300">
+                Have questions or feedback? We'd love to hear from you!
+            </p>
+            <div class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-md border border-gray-700">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 text-left mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:ring-[#BB86FC] focus:border-[#BB86FC] text-white placeholder-gray-400" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 text-left mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:ring-[#BB86FC] focus:border-[#BB86FC] text-white placeholder-gray-400" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 text-left mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:ring-[#BB86FC] focus:border-[#BB86FC] text-white placeholder-gray-400" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#BB86FC] text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm rounded-t-lg">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 FitLink. All rights reserved.</p>
+            <p class="mt-2">Designed for Viva Examination Presentation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu visibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
